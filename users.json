@@ -1,0 +1,15 @@
+[
+    {
+      "username": "john_doe",
+      "email": "john@example.com",
+      "password": "$2a$10$Wz1L7A7X9P7rj8kN5LTx/O/",
+      "role": "customer"
+    },
+    {
+      "username": "admin_user",
+      "email": "admin@example.com",
+      "password": "$2a$10$z7E1F4H/VmD1l2FnQ5n8oO/",
+      "role": "admin"
+    }
+  ]
+  

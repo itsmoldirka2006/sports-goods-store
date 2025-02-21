@@ -1,0 +1,31 @@
+[
+    {
+      "user_id": "65d1234567890abcdef12345",
+      "products": [
+        {
+          "product_id": "65d5432109876abcdef54321",
+          "quantity": 2
+        },
+        {
+          "product_id": "65d9876543210abcdef98765",
+          "quantity": 1
+        }
+      ],
+      "total_price": 38.97,
+      "status": "processing",
+      "order_date": "2025-02-20T10:00:00Z"
+    },
+    {
+      "user_id": "65d0987654321abcdef09876",
+      "products": [
+        {
+          "product_id": "65d6789012345abcdef67890",
+          "quantity": 3
+        }
+      ],
+      "total_price": 51.99,
+      "status": "shipped",
+      "order_date": "2025-02-19T15:30:00Z"
+    }
+  ]
+  
