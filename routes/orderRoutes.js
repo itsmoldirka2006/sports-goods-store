@@ -3,21 +3,20 @@ const Order = require("../models/Order");
 
 const router = express.Router();
 
-// Place an order
-router.post("/", async (req, res) => {
+// Update an order (Change status)
+router.put("/:id", async (req, res) => {
   try {
-    const newOrder = await Order.create(req.body);
-    res.status(201).json(newOrder);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+    const updatedOrder = await Order.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    
+    if (!updatedOrder) {
+      return res.status(404).json({ error: "Order not found" });
+    }
 
-// Get all orders
-router.get("/", async (req, res) => {
-  try {
-    const orders = await Order.find().populate("products.product_id");
-    res.json(orders);
+    res.json(updatedOrder);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
